@@ -1,0 +1,22 @@
+{
+  "schema_version": "2.0",
+  "algorithm_version": "sdr-srgb-v2",
+  "params": {
+    "exposure_ev": 0.15,
+    "contrast": 8,
+    "temperature": 32,
+    "tint": 3,
+    "highlights": -12,
+    "shadows": 10,
+    "whites": 4,
+    "blacks": -6,
+    "saturation": 8,
+    "vibrance": 10,
+    "hue": 0,
+    "split_shadow_hue": 30,
+    "split_shadow_amount": 12,
+    "split_highlight_hue": 45,
+    "split_highlight_amount": 14,
+    "split_balance": 10
+  }
+}

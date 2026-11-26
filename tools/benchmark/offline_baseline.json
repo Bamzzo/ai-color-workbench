@@ -1,0 +1,216 @@
+{
+  "label": "OfflineProvider v1（纯模板匹配，优化前）",
+  "captured_at": "2026-11-18 13:10:33",
+  "source": "runtime/benchmark_results/benchmark_raw.json",
+  "summary": {
+    "total": 24,
+    "first_pass_valid_rate": 100.0,
+    "clamping_rate": 54.17,
+    "direction_accuracy": 45.83,
+    "latency_mean_ms": 0.3648,
+    "latency_p95_ms": 1.0285,
+    "latency_max_ms": 1.5586,
+    "by_category": {
+      "single": {
+        "label": "单维微调",
+        "total": 6,
+        "direction_accuracy": 16.67,
+        "mean_latency_ms": 0.2118
+      },
+      "compound": {
+        "label": "复合氛围",
+        "total": 6,
+        "direction_accuracy": 100.0,
+        "mean_latency_ms": 0.7803
+      },
+      "incremental": {
+        "label": "增量微调",
+        "total": 4,
+        "direction_accuracy": 0.0,
+        "mean_latency_ms": 0.2076
+      },
+      "extreme": {
+        "label": "极端/边界",
+        "total": 4,
+        "direction_accuracy": 0.0,
+        "mean_latency_ms": 0.4363
+      },
+      "noise": {
+        "label": "无关噪声",
+        "total": 4,
+        "direction_accuracy": 100.0,
+        "mean_latency_ms": 0.0569
+      }
+    }
+  },
+  "cases": [
+    {
+      "case": "S1",
+      "category": "single",
+      "intent": "把画面整体调亮一点",
+      "expect": "曝光上升",
+      "direction_ok": false
+    },
+    {
+      "case": "S2",
+      "category": "single",
+      "intent": "画面太亮了，帮我压暗一些",
+      "expect": "曝光下降",
+      "direction_ok": false
+    },
+    {
+      "case": "S3",
+      "category": "single",
+      "intent": "增加一点对比度",
+      "expect": "对比度上升",
+      "direction_ok": false
+    },
+    {
+      "case": "S4",
+      "category": "single",
+      "intent": "把饱和度降下来一点",
+      "expect": "饱和度下降",
+      "direction_ok": false
+    },
+    {
+      "case": "S5",
+      "category": "single",
+      "intent": "整体调得偏暖一些",
+      "expect": "色温上升",
+      "direction_ok": true
+    },
+    {
+      "case": "S6",
+      "category": "single",
+      "intent": "把高光压一压",
+      "expect": "高光下降",
+      "direction_ok": false
+    },
+    {
+      "case": "M1",
+      "category": "compound",
+      "intent": "黄昏暖调，同时压住高光",
+      "expect": "色温上升 + 高光下降",
+      "direction_ok": true
+    },
+    {
+      "case": "M2",
+      "category": "compound",
+      "intent": "清冷通透的日系氛围",
+      "expect": "色温下降 + 曝光上升",
+      "direction_ok": true
+    },
+    {
+      "case": "M3",
+      "category": "compound",
+      "intent": "电影感的青橙色调",
+      "expect": "分离色调双侧着色",
+      "direction_ok": true
+    },
+    {
+      "case": "M4",
+      "category": "compound",
+      "intent": "黑白纪实风格，加强对比",
+      "expect": "饱和度归零 + 对比度上升",
+      "direction_ok": true
+    },
+    {
+      "case": "M5",
+      "category": "compound",
+      "intent": "柔和低对比的雾面感",
+      "expect": "对比度下降",
+      "direction_ok": true
+    },
+    {
+      "case": "M6",
+      "category": "compound",
+      "intent": "鲜艳浓郁的风光大片",
+      "expect": "色彩浓度上升（饱和度或自然饱和度）",
+      "direction_ok": true
+    },
+    {
+      "case": "I1",
+      "category": "incremental",
+      "intent": "再暖一点",
+      "expect": "在当前暖色基础上色温继续上升",
+      "direction_ok": false
+    },
+    {
+      "case": "I2",
+      "category": "incremental",
+      "intent": "高光再压一点",
+      "expect": "在当前基础上高光继续下降",
+      "direction_ok": false
+    },
+    {
+      "case": "I3",
+      "category": "incremental",
+      "intent": "饱和度再高一些",
+      "expect": "在当前基础上饱和度继续上升",
+      "direction_ok": false
+    },
+    {
+      "case": "I4",
+      "category": "incremental",
+      "intent": "对比再强一点",
+      "expect": "在当前基础上对比度继续上升",
+      "direction_ok": false
+    },
+    {
+      "case": "X1",
+      "category": "extreme",
+      "intent": "曝光拉到最亮",
+      "expect": "曝光接近 +2 EV 上界",
+      "direction_ok": false
+    },
+    {
+      "case": "X2",
+      "category": "extreme",
+      "intent": "饱和度全部去掉，越灰越好",
+      "expect": "饱和度贴近 -100 下界",
+      "direction_ok": false
+    },
+    {
+      "case": "X3",
+      "category": "extreme",
+      "intent": "色温调到最冷",
+      "expect": "色温贴近 -100 下界",
+      "direction_ok": false
+    },
+    {
+      "case": "X4",
+      "category": "extreme",
+      "intent": "对比度拉到极限",
+      "expect": "对比度贴近 +100 上界",
+      "direction_ok": false
+    },
+    {
+      "case": "N1",
+      "category": "noise",
+      "intent": "帮我写个冒泡排序",
+      "expect": "参数保持不变",
+      "direction_ok": true
+    },
+    {
+      "case": "N2",
+      "category": "noise",
+      "intent": "今天天气怎么样",
+      "expect": "参数保持不变",
+      "direction_ok": true
+    },
+    {
+      "case": "N3",
+      "category": "noise",
+      "intent": "1+1 等于几",
+      "expect": "参数保持不变",
+      "direction_ok": true
+    },
+    {
+      "case": "N4",
+      "category": "noise",
+      "intent": "把这段文字翻译成英文",
+      "expect": "参数保持不变",
+      "direction_ok": true
+    }
+  ]
+}

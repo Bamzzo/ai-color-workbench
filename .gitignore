@@ -1,0 +1,83 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+
+# Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# JavaScript build dependencies and output
+frontend/node_modules/
+frontend/dist/
+*.tsbuildinfo
+node_modules/
+dist/
+
+# Native build outputs and IDE state
+build/
+build-arm64/
+build-*/
+.vs/
+*.exe
+*.dll
+*.obj
+*.pdb
+*.lib
+*.exp
+*.ilk
+*.pch
+*.idb
+*.sdf
+*.opensdf
+*.suo
+*.user
+*.vcxproj.user
+
+# Runtime evidence is selective: keep reproducible harnesses and benchmark results,
+# ignore local captures and generated scratch data.
+runtime/*
+!runtime/*.py
+!runtime/benchmark_results/
+!runtime/benchmark_results/**
+runtime/benchmark_results/.work/
+runtime/benchmark_results/**/.work/
+runtime/*.png
+runtime/*.rgba
+runtime/*.cube
+runtime/*.mp4
+runtime/*.mov
+runtime/*.mkv
+runtime/*.webm
+runtime/*.avi
+runtime/screenshots/
+
+# Logs, temporary output, and generated media
+*.log
+*.ppm
+*.partial.mp4
+*.partial.mov
+*.partial.mkv
+*.partial.webm
+*.tmp.mp4
+*.tmp.mov
+*.tmp.mkv
+*.tmp.webm
+runtime/uploads/
+runtime/exports/
+runtime/tmp/
+runtime/media_index.json
+runtime/jobs/
+runtime/cache/
+runtime/logs/
+runtime/test-fixtures/
+runtime/.work/
+
+
+# Historical UI capture contains a local temporary output path.
+docs/test-runs/evidence/2026-11-11-ui-acceptance/03-batch-long-names.png

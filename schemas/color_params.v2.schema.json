@@ -1,0 +1,120 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/ai_color_app/color_params.v2.schema.json",
+  "title": "ColorParams v2",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "algorithm_version", "params"],
+  "properties": {
+    "schema_version": {
+      "const": "2.0"
+    },
+    "algorithm_version": {
+      "const": "sdr-srgb-v2"
+    },
+    "params": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "exposure_ev",
+        "contrast",
+        "temperature",
+        "tint",
+        "highlights",
+        "shadows",
+        "whites",
+        "blacks",
+        "saturation",
+        "vibrance",
+        "hue",
+        "split_shadow_hue",
+        "split_shadow_amount",
+        "split_highlight_hue",
+        "split_highlight_amount",
+        "split_balance"
+      ],
+      "properties": {
+        "exposure_ev": {
+          "type": "number",
+          "minimum": -2,
+          "maximum": 2
+        },
+        "contrast": {
+          "type": "number",
+          "minimum": -100,
+          "maximum": 100
+        },
+        "temperature": {
+          "type": "number",
+          "minimum": -100,
+          "maximum": 100
+        },
+        "tint": {
+          "type": "number",
+          "minimum": -100,
+          "maximum": 100
+        },
+        "highlights": {
+          "type": "number",
+          "minimum": -100,
+          "maximum": 100
+        },
+        "shadows": {
+          "type": "number",
+          "minimum": -100,
+          "maximum": 100
+        },
+        "whites": {
+          "type": "number",
+          "minimum": -100,
+          "maximum": 100
+        },
+        "blacks": {
+          "type": "number",
+          "minimum": -100,
+          "maximum": 100
+        },
+        "saturation": {
+          "type": "number",
+          "minimum": -100,
+          "maximum": 100
+        },
+        "vibrance": {
+          "type": "number",
+          "minimum": -100,
+          "maximum": 100
+        },
+        "hue": {
+          "type": "number",
+          "minimum": -180,
+          "maximum": 180
+        },
+        "split_shadow_hue": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 360
+        },
+        "split_shadow_amount": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "split_highlight_hue": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 360
+        },
+        "split_highlight_amount": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "split_balance": {
+          "type": "number",
+          "minimum": -100,
+          "maximum": 100
+        }
+      }
+    }
+  }
+}

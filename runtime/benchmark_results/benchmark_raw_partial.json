@@ -1,0 +1,1198 @@
+{
+  "meta": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "machine": "ARM64",
+    "processor": "ARMv8 (64-bit) Family 8 Model D4B Revision   0, Qualcomm Technologies Inc",
+    "cpu_model": "Snapdragon (TM) 8cx Gen 3 @ 3.0 GHz",
+    "gpu_model": "Virtual Display Device",
+    "python": "3.13.12",
+    "numpy": "2.5.4",
+    "matplotlib": "3.11.2",
+    "pillow": "13.0.0",
+    "algorithm_version": "sdr-srgb-v2",
+    "worker_path": "build-arm64\\Debug\\render_worker.exe",
+    "worker_bytes": 1235456,
+    "worker_mtime": "2026-10-20 13:09:38",
+    "results_dir": "runtime\\benchmark_results",
+    "generated_at": "2026-11-18 13:35:15",
+    "gl_context": "OpenGL 3.3 Core (offscreen FBO, Mesa software rasteriser)"
+  },
+  "dim5_ai": {
+    "instructions": [
+      "把画面整体调亮一点",
+      "画面太亮了，帮我压暗一些",
+      "增加一点对比度",
+      "把饱和度降下来一点",
+      "整体调得偏暖一些",
+      "把高光压一压",
+      "黄昏暖调，同时压住高光",
+      "清冷通透的日系氛围",
+      "电影感的青橙色调",
+      "黑白纪实风格，加强对比",
+      "柔和低对比的雾面感",
+      "鲜艳浓郁的风光大片",
+      "再暖一点",
+      "高光再压一点",
+      "饱和度再高一些",
+      "对比再强一点",
+      "曝光拉到最亮",
+      "饱和度全部去掉，越灰越好",
+      "色温调到最冷",
+      "对比度拉到极限",
+      "帮我写个冒泡排序",
+      "今天天气怎么样",
+      "1+1 等于几",
+      "把这段文字翻译成英文"
+    ],
+    "family_counts": {
+      "单维微调": 6,
+      "复合氛围": 6,
+      "增量微调": 4,
+      "极端/边界": 4,
+      "无关噪声": 4
+    },
+    "providers": [
+      {
+        "provider": "offline",
+        "model": "template",
+        "cases": [
+          {
+            "case": "S1",
+            "category": "single",
+            "intent": "把画面整体调亮一点",
+            "expect": "曝光上升",
+            "current": "identity",
+            "latency_ms": 0.6062,
+            "valid": true,
+            "boundary": [
+              "split_shadow_hue=0",
+              "split_shadow_amount=0",
+              "split_highlight_hue=0",
+              "split_highlight_amount=0"
+            ],
+            "direction_ok": true,
+            "checks": [
+              "gt(exposure_ev)=PASS"
+            ],
+            "params": {
+              "exposure_ev": 0.25,
+              "contrast": 0.0,
+              "temperature": 0.0,
+              "tint": 0.0,
+              "highlights": 0.0,
+              "shadows": 0.0,
+              "whites": 0.0,
+              "blacks": 0.0,
+              "saturation": 0.0,
+              "vibrance": 0.0,
+              "hue": 0.0,
+              "split_shadow_hue": 0.0,
+              "split_shadow_amount": 0.0,
+              "split_highlight_hue": 0.0,
+              "split_highlight_amount": 0.0,
+              "split_balance": 0.0
+            },
+            "error": ""
+          },
+          {
+            "case": "S2",
+            "category": "single",
+            "intent": "画面太亮了，帮我压暗一些",
+            "expect": "曝光下降",
+            "current": "identity",
+            "latency_ms": 0.2169,
+            "valid": true,
+            "boundary": [
+              "split_shadow_hue=0",
+              "split_shadow_amount=0",
+              "split_highlight_hue=0",
+              "split_highlight_amount=0"
+            ],
+            "direction_ok": true,
+            "checks": [
+              "lt(exposure_ev)=PASS"
+            ],
+            "params": {
+              "exposure_ev": -0.25,
+              "contrast": 0.0,
+              "temperature": 0.0,
+              "tint": 0.0,
+              "highlights": 0.0,
+              "shadows": 0.0,
+              "whites": 0.0,
+              "blacks": 0.0,
+              "saturation": 0.0,
+              "vibrance": 0.0,
+              "hue": 0.0,
+              "split_shadow_hue": 0.0,
+              "split_shadow_amount": 0.0,
+              "split_highlight_hue": 0.0,
+              "split_highlight_amount": 0.0,
+              "split_balance": 0.0
+            },
+            "error": ""
+          },
+          {
+            "case": "S3",
+            "category": "single",
+            "intent": "增加一点对比度",
+            "expect": "对比度上升",
+            "current": "identity",
+            "latency_ms": 0.1798,
+            "valid": true,
+            "boundary": [
+              "split_shadow_hue=0",
+              "split_shadow_amount=0",
+              "split_highlight_hue=0",
+              "split_highlight_amount=0"
+            ],
+            "direction_ok": true,
+            "checks": [
+              "gt(contrast)=PASS"
+            ],
+            "params": {
+              "exposure_ev": 0.0,
+              "contrast": 15.0,
+              "temperature": 0.0,
+              "tint": 0.0,
+              "highlights": 0.0,
+              "shadows": 0.0,
+              "whites": 0.0,
+              "blacks": 0.0,
+              "saturation": 0.0,
+              "vibrance": 0.0,
+              "hue": 0.0,
+              "split_shadow_hue": 0.0,
+              "split_shadow_amount": 0.0,
+              "split_highlight_hue": 0.0,
+              "split_highlight_amount": 0.0,
+              "split_balance": 0.0
+            },
+            "error": ""
+          },
+          {
+            "case": "S4",
+            "category": "single",
+            "intent": "把饱和度降下来一点",
+            "expect": "饱和度下降",
+            "current": "identity",
+            "latency_ms": 0.1667,
+            "valid": true,
+            "boundary": [
+              "split_shadow_hue=0",
+              "split_shadow_amount=0",
+              "split_highlight_hue=0",
+              "split_highlight_amount=0"
+            ],
+            "direction_ok": true,
+            "checks": [
+              "lt(saturation)=PASS"
+            ],
+            "params": {
+              "exposure_ev": 0.0,
+              "contrast": 0.0,
+              "temperature": 0.0,
+              "tint": 0.0,
+              "highlights": 0.0,
+              "shadows": 0.0,
+              "whites": 0.0,
+              "blacks": 0.0,
+              "saturation": -15.0,
+              "vibrance": 0.0,
+              "hue": 0.0,
+              "split_shadow_hue": 0.0,
+              "split_shadow_amount": 0.0,
+              "split_highlight_hue": 0.0,
+              "split_highlight_amount": 0.0,
+              "split_balance": 0.0
+            },
+            "error": ""
+          },
+          {
+            "case": "S5",
+            "category": "single",
+            "intent": "整体调得偏暖一些",
+            "expect": "色温上升",
+            "current": "identity",
+            "latency_ms": 0.4877,
+            "valid": true,
+            "boundary": [
+              "split_shadow_hue=0",
+              "split_shadow_amount=0",
+              "split_highlight_hue=0",
+              "split_highlight_amount=0"
+            ],
+            "direction_ok": true,
+            "checks": [
+              "gt(temperature)=PASS"
+            ],
+            "params": {
+              "exposure_ev": 0.0,
+              "contrast": 0.0,
+              "temperature": 15.0,
+              "tint": 0.0,
+              "highlights": 0.0,
+              "shadows": 0.0,
+              "whites": 0.0,
+              "blacks": 0.0,
+              "saturation": 0.0,
+              "vibrance": 0.0,
+              "hue": 0.0,
+              "split_shadow_hue": 0.0,
+              "split_shadow_amount": 0.0,
+              "split_highlight_hue": 0.0,
+              "split_highlight_amount": 0.0,
+              "split_balance": 0.0
+            },
+            "error": ""
+          },
+          {
+            "case": "S6",
+            "category": "single",
+            "intent": "把高光压一压",
+            "expect": "高光下降",
+            "current": "identity",
+            "latency_ms": 0.1782,
+            "valid": true,
+            "boundary": [
+              "split_shadow_hue=0",
+              "split_shadow_amount=0",
+              "split_highlight_hue=0",
+              "split_highlight_amount=0"
+            ],
+            "direction_ok": true,
+            "checks": [
+              "lt(highlights)=PASS"
+            ],
+            "params": {
+              "exposure_ev": 0.0,
+              "contrast": 0.0,
+              "temperature": 0.0,
+              "tint": 0.0,
+              "highlights": -25.0,
+              "shadows": 0.0,
+              "whites": 0.0,
+              "blacks": 0.0,
+              "saturation": 0.0,
+              "vibrance": 0.0,
+              "hue": 0.0,
+              "split_shadow_hue": 0.0,
+              "split_shadow_amount": 0.0,
+              "split_highlight_hue": 0.0,
+              "split_highlight_amount": 0.0,
+              "split_balance": 0.0
+            },
+            "error": ""
+          },
+          {
+            "case": "M1",
+            "category": "compound",
+            "intent": "黄昏暖调，同时压住高光",
+            "expect": "色温上升 + 高光下降",
+            "current": "identity",
+            "latency_ms": 1.358,
+            "valid": true,
+            "boundary": [],
+            "direction_ok": true,
+            "checks": [
+              "gt(temperature)=PASS",
+              "lt(highlights)=PASS"
+            ],
+            "params": {
+              "exposure_ev": 0.15,
+              "contrast": 8.0,
+              "temperature": 57.0,
+              "tint": 3.0,
+              "highlights": -37.0,
+              "shadows": 10.0,
+              "whites": 4.0,
+              "blacks": -6.0,
+              "saturation": 8.0,
+              "vibrance": 10.0,
+              "hue": 0.0,
+              "split_shadow_hue": 30.0,
+              "split_shadow_amount": 12.0,
+              "split_highlight_hue": 45.0,
+              "split_highlight_amount": 14.0,
+              "split_balance": 10.0
+            },
+            "error": ""
+          },
+          {
+            "case": "M2",
+            "category": "compound",
+            "intent": "清冷通透的日系氛围",
+            "expect": "色温下降 + 曝光上升",
+            "current": "identity",
+            "latency_ms": 1.0312,
+            "valid": true,
+            "boundary": [],
+            "direction_ok": true,
+            "checks": [
+              "lt(temperature)=PASS",
+              "gt(exposure_ev)=PASS"
+            ],
+            "params": {
+              "exposure_ev": 0.2,
+              "contrast": 12.0,
+              "temperature": -34.0,
+              "tint": -4.0,
+              "highlights": -12.0,
+              "shadows": 15.0,
+              "whites": -4.0,
+              "blacks": 4.0,
+              "saturation": -4.0,
+              "vibrance": 6.0,
+              "hue": 0.0,
+              "split_shadow_hue": 210.0,
+              "split_shadow_amount": 14.0,
+              "split_highlight_hue": 195.0,
+              "split_highlight_amount": 8.0,
+              "split_balance": -10.0
+            },
+            "error": ""
+          },
+          {
+            "case": "M3",
+            "category": "compound",
+            "intent": "电影感的青橙色调",
+            "expect": "分离色调双侧着色",
+            "current": "identity",
+            "latency_ms": 0.8679,
+            "valid": true,
+            "boundary": [],
+            "direction_ok": true,
+            "checks": [
+              "gt(split_shadow_amount)=PASS",
+              "gt(split_highlight_amount)=PASS"
+            ],
+            "params": {
+              "exposure_ev": 0.05,
+              "contrast": 18.0,
+              "temperature": 6.0,
+              "tint": -2.0,
+              "highlights": -22.0,
+              "shadows": 8.0,
+              "whites": -6.0,
+              "blacks": -8.0,
+              "saturation": -6.0,
+              "vibrance": 4.0,
+              "hue": 0.0,
+              "split_shadow_hue": 190.0,
+              "split_shadow_amount": 26.0,
+              "split_highlight_hue": 35.0,
+              "split_highlight_amount": 22.0,
+              "split_balance": 6.0
+            },
+            "error": ""
+          },
+          {
+            "case": "M4",
+            "category": "compound",
+            "intent": "黑白纪实风格，加强对比",
+            "expect": "饱和度归零 + 对比度上升",
+            "current": "identity",
+            "latency_ms": 0.9113,
+            "valid": true,
+            "boundary": [
+              "saturation=-100",
+              "split_shadow_hue=0",
+              "split_shadow_amount=0",
+              "split_highlight_hue=0",
+              "split_highlight_amount=0"
+            ],
+            "direction_ok": true,
+            "checks": [
+              "le(saturation)=PASS",
+              "gt(contrast)=PASS"
+            ],
+            "params": {
+              "exposure_ev": 0.05,
+              "contrast": 47.0,
+              "temperature": 0.0,
+              "tint": 0.0,
+              "highlights": -10.0,
+              "shadows": 6.0,
+              "whites": 6.0,
+              "blacks": -10.0,
+              "saturation": -100.0,
+              "vibrance": 0.0,
+              "hue": 0.0,
+              "split_shadow_hue": 0.0,
+              "split_shadow_amount": 0.0,
+              "split_highlight_hue": 0.0,
+              "split_highlight_amount": 0.0,
+              "split_balance": 0.0
+            },
+            "error": ""
+          },
+          {
+            "case": "M5",
+            "category": "compound",
+            "intent": "柔和低对比的雾面感",
+            "expect": "对比度下降",
+            "current": "identity",
+            "latency_ms": 0.8852,
+            "valid": true,
+            "boundary": [],
+            "direction_ok": true,
+            "checks": [
+              "lt(contrast)=PASS"
+            ],
+            "params": {
+              "exposure_ev": 0.2,
+              "contrast": -14.0,
+              "temperature": 6.0,
+              "tint": 2.0,
+              "highlights": -18.0,
+              "shadows": 22.0,
+              "whites": -10.0,
+              "blacks": 14.0,
+              "saturation": -8.0,
+              "vibrance": 4.0,
+              "hue": 0.0,
+              "split_shadow_hue": 40.0,
+              "split_shadow_amount": 6.0,
+              "split_highlight_hue": 50.0,
+              "split_highlight_amount": 8.0,
+              "split_balance": 0.0
+            },
+            "error": ""
+          },
+          {
+            "case": "M6",
+            "category": "compound",
+            "intent": "鲜艳浓郁的风光大片",
+            "expect": "色彩浓度上升（饱和度或自然饱和度）",
+            "current": "identity",
+            "latency_ms": 0.9447,
+            "valid": true,
+            "boundary": [],
+            "direction_ok": true,
+            "checks": [
+              "gt(saturation,vibrance)=PASS"
+            ],
+            "params": {
+              "exposure_ev": 0.15,
+              "contrast": 8.0,
+              "temperature": 32.0,
+              "tint": 3.0,
+              "highlights": -12.0,
+              "shadows": 10.0,
+              "whites": 4.0,
+              "blacks": -6.0,
+              "saturation": 10.0,
+              "vibrance": 22.0,
+              "hue": 0.0,
+              "split_shadow_hue": 30.0,
+              "split_shadow_amount": 12.0,
+              "split_highlight_hue": 45.0,
+              "split_highlight_amount": 14.0,
+              "split_balance": 10.0
+            },
+            "error": ""
+          },
+          {
+            "case": "I1",
+            "category": "incremental",
+            "intent": "再暖一点",
+            "expect": "在当前暖色基础上色温继续上升",
+            "current": "warm",
+            "latency_ms": 0.2083,
+            "valid": true,
+            "boundary": [],
+            "direction_ok": true,
+            "checks": [
+              "gt(temperature)=PASS"
+            ],
+            "params": {
+              "exposure_ev": 0.15,
+              "contrast": 8.0,
+              "temperature": 47.0,
+              "tint": 3.0,
+              "highlights": -12.0,
+              "shadows": 10.0,
+              "whites": 4.0,
+              "blacks": -6.0,
+              "saturation": 8.0,
+              "vibrance": 10.0,
+              "hue": 0.0,
+              "split_shadow_hue": 30.0,
+              "split_shadow_amount": 12.0,
+              "split_highlight_hue": 45.0,
+              "split_highlight_amount": 14.0,
+              "split_balance": 10.0
+            },
+            "error": ""
+          },
+          {
+            "case": "I2",
+            "category": "incremental",
+            "intent": "高光再压一点",
+            "expect": "在当前基础上高光继续下降",
+            "current": "warm",
+            "latency_ms": 0.2019,
+            "valid": true,
+            "boundary": [],
+            "direction_ok": true,
+            "checks": [
+              "lt(highlights)=PASS"
+            ],
+            "params": {
+              "exposure_ev": 0.15,
+              "contrast": 8.0,
+              "temperature": 32.0,
+              "tint": 3.0,
+              "highlights": -27.0,
+              "shadows": 10.0,
+              "whites": 4.0,
+              "blacks": -6.0,
+              "saturation": 8.0,
+              "vibrance": 10.0,
+              "hue": 0.0,
+              "split_shadow_hue": 30.0,
+              "split_shadow_amount": 12.0,
+              "split_highlight_hue": 45.0,
+              "split_highlight_amount": 14.0,
+              "split_balance": 10.0
+            },
+            "error": ""
+          },
+          {
+            "case": "I3",
+            "category": "incremental",
+            "intent": "饱和度再高一些",
+            "expect": "在当前基础上饱和度继续上升",
+            "current": "warm",
+            "latency_ms": 0.201,
+            "valid": true,
+            "boundary": [],
+            "direction_ok": true,
+            "checks": [
+              "gt(saturation)=PASS"
+            ],
+            "params": {
+              "exposure_ev": 0.15,
+              "contrast": 8.0,
+              "temperature": 32.0,
+              "tint": 3.0,
+              "highlights": -12.0,
+              "shadows": 10.0,
+              "whites": 4.0,
+              "blacks": -6.0,
+              "saturation": 23.0,
+              "vibrance": 10.0,
+              "hue": 0.0,
+              "split_shadow_hue": 30.0,
+              "split_shadow_amount": 12.0,
+              "split_highlight_hue": 45.0,
+              "split_highlight_amount": 14.0,
+              "split_balance": 10.0
+            },
+            "error": ""
+          },
+          {
+            "case": "I4",
+            "category": "incremental",
+            "intent": "对比再强一点",
+            "expect": "在当前基础上对比度继续上升",
+            "current": "warm",
+            "latency_ms": 0.4214,
+            "valid": true,
+            "boundary": [],
+            "direction_ok": true,
+            "checks": [
+              "gt(contrast)=PASS"
+            ],
+            "params": {
+              "exposure_ev": 0.15,
+              "contrast": 23.0,
+              "temperature": 32.0,
+              "tint": 3.0,
+              "highlights": -12.0,
+              "shadows": 10.0,
+              "whites": 4.0,
+              "blacks": -6.0,
+              "saturation": 8.0,
+              "vibrance": 10.0,
+              "hue": 0.0,
+              "split_shadow_hue": 30.0,
+              "split_shadow_amount": 12.0,
+              "split_highlight_hue": 45.0,
+              "split_highlight_amount": 14.0,
+              "split_balance": 10.0
+            },
+            "error": ""
+          },
+          {
+            "case": "X1",
+            "category": "extreme",
+            "intent": "曝光拉到最亮",
+            "expect": "曝光接近 +2 EV 上界",
+            "current": "identity",
+            "latency_ms": 0.3096,
+            "valid": true,
+            "boundary": [
+              "exposure_ev=2",
+              "split_shadow_hue=0",
+              "split_shadow_amount=0",
+              "split_highlight_hue=0",
+              "split_highlight_amount=0"
+            ],
+            "direction_ok": true,
+            "checks": [
+              "ge(exposure_ev)=PASS"
+            ],
+            "params": {
+              "exposure_ev": 2.0,
+              "contrast": 0.0,
+              "temperature": 0.0,
+              "tint": 0.0,
+              "highlights": 0.0,
+              "shadows": 0.0,
+              "whites": 0.0,
+              "blacks": 0.0,
+              "saturation": 0.0,
+              "vibrance": 0.0,
+              "hue": 0.0,
+              "split_shadow_hue": 0.0,
+              "split_shadow_amount": 0.0,
+              "split_highlight_hue": 0.0,
+              "split_highlight_amount": 0.0,
+              "split_balance": 0.0
+            },
+            "error": ""
+          },
+          {
+            "case": "X2",
+            "category": "extreme",
+            "intent": "饱和度全部去掉，越灰越好",
+            "expect": "饱和度贴近 -100 下界",
+            "current": "identity",
+            "latency_ms": 0.2882,
+            "valid": true,
+            "boundary": [
+              "saturation=-100",
+              "split_shadow_hue=0",
+              "split_shadow_amount=0",
+              "split_highlight_hue=0",
+              "split_highlight_amount=0"
+            ],
+            "direction_ok": true,
+            "checks": [
+              "le(saturation)=PASS"
+            ],
+            "params": {
+              "exposure_ev": 0.0,
+              "contrast": 0.0,
+              "temperature": 0.0,
+              "tint": 0.0,
+              "highlights": 0.0,
+              "shadows": 0.0,
+              "whites": 0.0,
+              "blacks": 0.0,
+              "saturation": -100.0,
+              "vibrance": 0.0,
+              "hue": 0.0,
+              "split_shadow_hue": 0.0,
+              "split_shadow_amount": 0.0,
+              "split_highlight_hue": 0.0,
+              "split_highlight_amount": 0.0,
+              "split_balance": 0.0
+            },
+            "error": ""
+          },
+          {
+            "case": "X3",
+            "category": "extreme",
+            "intent": "色温调到最冷",
+            "expect": "色温贴近 -100 下界",
+            "current": "identity",
+            "latency_ms": 0.2468,
+            "valid": true,
+            "boundary": [
+              "temperature=-100",
+              "split_shadow_hue=0",
+              "split_shadow_amount=0",
+              "split_highlight_hue=0",
+              "split_highlight_amount=0"
+            ],
+            "direction_ok": true,
+            "checks": [
+              "le(temperature)=PASS"
+            ],
+            "params": {
+              "exposure_ev": 0.0,
+              "contrast": 0.0,
+              "temperature": -100.0,
+              "tint": 0.0,
+              "highlights": 0.0,
+              "shadows": 0.0,
+              "whites": 0.0,
+              "blacks": 0.0,
+              "saturation": 0.0,
+              "vibrance": 0.0,
+              "hue": 0.0,
+              "split_shadow_hue": 0.0,
+              "split_shadow_amount": 0.0,
+              "split_highlight_hue": 0.0,
+              "split_highlight_amount": 0.0,
+              "split_balance": 0.0
+            },
+            "error": ""
+          },
+          {
+            "case": "X4",
+            "category": "extreme",
+            "intent": "对比度拉到极限",
+            "expect": "对比度贴近 +100 上界",
+            "current": "identity",
+            "latency_ms": 0.284,
+            "valid": true,
+            "boundary": [
+              "contrast=100",
+              "split_shadow_hue=0",
+              "split_shadow_amount=0",
+              "split_highlight_hue=0",
+              "split_highlight_amount=0"
+            ],
+            "direction_ok": true,
+            "checks": [
+              "ge(contrast)=PASS"
+            ],
+            "params": {
+              "exposure_ev": 0.0,
+              "contrast": 100.0,
+              "temperature": 0.0,
+              "tint": 0.0,
+              "highlights": 0.0,
+              "shadows": 0.0,
+              "whites": 0.0,
+              "blacks": 0.0,
+              "saturation": 0.0,
+              "vibrance": 0.0,
+              "hue": 0.0,
+              "split_shadow_hue": 0.0,
+              "split_shadow_amount": 0.0,
+              "split_highlight_hue": 0.0,
+              "split_highlight_amount": 0.0,
+              "split_balance": 0.0
+            },
+            "error": ""
+          },
+          {
+            "case": "N1",
+            "category": "noise",
+            "intent": "帮我写个冒泡排序",
+            "expect": "参数保持不变",
+            "current": "identity",
+            "latency_ms": 0.6217,
+            "valid": true,
+            "boundary": [
+              "split_shadow_hue=0",
+              "split_shadow_amount=0",
+              "split_highlight_hue=0",
+              "split_highlight_amount=0"
+            ],
+            "direction_ok": true,
+            "checks": [
+              "unchanged(exposure_ev,contrast,temperature,tint,highlights,shadows,whites,blacks,saturation,vibrance,hue,split_shadow_hue,split_shadow_amount,split_highlight_hue,split_highlight_amount,split_balance)=PASS"
+            ],
+            "params": {
+              "exposure_ev": 0.0,
+              "contrast": 0.0,
+              "temperature": 0.0,
+              "tint": 0.0,
+              "highlights": 0.0,
+              "shadows": 0.0,
+              "whites": 0.0,
+              "blacks": 0.0,
+              "saturation": 0.0,
+              "vibrance": 0.0,
+              "hue": 0.0,
+              "split_shadow_hue": 0.0,
+              "split_shadow_amount": 0.0,
+              "split_highlight_hue": 0.0,
+              "split_highlight_amount": 0.0,
+              "split_balance": 0.0
+            },
+            "error": ""
+          },
+          {
+            "case": "N2",
+            "category": "noise",
+            "intent": "今天天气怎么样",
+            "expect": "参数保持不变",
+            "current": "identity",
+            "latency_ms": 0.1141,
+            "valid": true,
+            "boundary": [
+              "split_shadow_hue=0",
+              "split_shadow_amount=0",
+              "split_highlight_hue=0",
+              "split_highlight_amount=0"
+            ],
+            "direction_ok": true,
+            "checks": [
+              "unchanged(exposure_ev,contrast,temperature,tint,highlights,shadows,whites,blacks,saturation,vibrance,hue,split_shadow_hue,split_shadow_amount,split_highlight_hue,split_highlight_amount,split_balance)=PASS"
+            ],
+            "params": {
+              "exposure_ev": 0.0,
+              "contrast": 0.0,
+              "temperature": 0.0,
+              "tint": 0.0,
+              "highlights": 0.0,
+              "shadows": 0.0,
+              "whites": 0.0,
+              "blacks": 0.0,
+              "saturation": 0.0,
+              "vibrance": 0.0,
+              "hue": 0.0,
+              "split_shadow_hue": 0.0,
+              "split_shadow_amount": 0.0,
+              "split_highlight_hue": 0.0,
+              "split_highlight_amount": 0.0,
+              "split_balance": 0.0
+            },
+            "error": ""
+          },
+          {
+            "case": "N3",
+            "category": "noise",
+            "intent": "1+1 等于几",
+            "expect": "参数保持不变",
+            "current": "identity",
+            "latency_ms": 0.1004,
+            "valid": true,
+            "boundary": [
+              "split_shadow_hue=0",
+              "split_shadow_amount=0",
+              "split_highlight_hue=0",
+              "split_highlight_amount=0"
+            ],
+            "direction_ok": true,
+            "checks": [
+              "unchanged(exposure_ev,contrast,temperature,tint,highlights,shadows,whites,blacks,saturation,vibrance,hue,split_shadow_hue,split_shadow_amount,split_highlight_hue,split_highlight_amount,split_balance)=PASS"
+            ],
+            "params": {
+              "exposure_ev": 0.0,
+              "contrast": 0.0,
+              "temperature": 0.0,
+              "tint": 0.0,
+              "highlights": 0.0,
+              "shadows": 0.0,
+              "whites": 0.0,
+              "blacks": 0.0,
+              "saturation": 0.0,
+              "vibrance": 0.0,
+              "hue": 0.0,
+              "split_shadow_hue": 0.0,
+              "split_shadow_amount": 0.0,
+              "split_highlight_hue": 0.0,
+              "split_highlight_amount": 0.0,
+              "split_balance": 0.0
+            },
+            "error": ""
+          },
+          {
+            "case": "N4",
+            "category": "noise",
+            "intent": "把这段文字翻译成英文",
+            "expect": "参数保持不变",
+            "current": "identity",
+            "latency_ms": 0.1016,
+            "valid": true,
+            "boundary": [
+              "split_shadow_hue=0",
+              "split_shadow_amount=0",
+              "split_highlight_hue=0",
+              "split_highlight_amount=0"
+            ],
+            "direction_ok": true,
+            "checks": [
+              "unchanged(exposure_ev,contrast,temperature,tint,highlights,shadows,whites,blacks,saturation,vibrance,hue,split_shadow_hue,split_shadow_amount,split_highlight_hue,split_highlight_amount,split_balance)=PASS"
+            ],
+            "params": {
+              "exposure_ev": 0.0,
+              "contrast": 0.0,
+              "temperature": 0.0,
+              "tint": 0.0,
+              "highlights": 0.0,
+              "shadows": 0.0,
+              "whites": 0.0,
+              "blacks": 0.0,
+              "saturation": 0.0,
+              "vibrance": 0.0,
+              "hue": 0.0,
+              "split_shadow_hue": 0.0,
+              "split_shadow_amount": 0.0,
+              "split_highlight_hue": 0.0,
+              "split_highlight_amount": 0.0,
+              "split_balance": 0.0
+            },
+            "error": ""
+          }
+        ],
+        "summary": {
+          "total": 24,
+          "first_pass_valid_rate": 100.0,
+          "clamping_rate": 62.5,
+          "direction_accuracy": 100.0,
+          "latency_mean_ms": 0.4555,
+          "latency_p95_ms": 1.0182,
+          "latency_max_ms": 1.358,
+          "by_category": {
+            "single": {
+              "label": "单维微调",
+              "total": 6,
+              "direction_accuracy": 100.0,
+              "mean_latency_ms": 0.3059
+            },
+            "compound": {
+              "label": "复合氛围",
+              "total": 6,
+              "direction_accuracy": 100.0,
+              "mean_latency_ms": 0.9997
+            },
+            "incremental": {
+              "label": "增量微调",
+              "total": 4,
+              "direction_accuracy": 100.0,
+              "mean_latency_ms": 0.2581
+            },
+            "extreme": {
+              "label": "极端/边界",
+              "total": 4,
+              "direction_accuracy": 100.0,
+              "mean_latency_ms": 0.2822
+            },
+            "noise": {
+              "label": "无关噪声",
+              "total": 4,
+              "direction_accuracy": 100.0,
+              "mean_latency_ms": 0.2345
+            }
+          }
+        }
+      }
+    ],
+    "online_note": "未请求在线评测（未传入 --online）",
+    "baseline": {
+      "label": "OfflineProvider v1（纯模板匹配，优化前）",
+      "captured_at": "2026-11-18 13:10:33",
+      "source": "runtime/benchmark_results/benchmark_raw.json",
+      "summary": {
+        "total": 24,
+        "first_pass_valid_rate": 100.0,
+        "clamping_rate": 54.17,
+        "direction_accuracy": 45.83,
+        "latency_mean_ms": 0.3648,
+        "latency_p95_ms": 1.0285,
+        "latency_max_ms": 1.5586,
+        "by_category": {
+          "single": {
+            "label": "单维微调",
+            "total": 6,
+            "direction_accuracy": 16.67,
+            "mean_latency_ms": 0.2118
+          },
+          "compound": {
+            "label": "复合氛围",
+            "total": 6,
+            "direction_accuracy": 100.0,
+            "mean_latency_ms": 0.7803
+          },
+          "incremental": {
+            "label": "增量微调",
+            "total": 4,
+            "direction_accuracy": 0.0,
+            "mean_latency_ms": 0.2076
+          },
+          "extreme": {
+            "label": "极端/边界",
+            "total": 4,
+            "direction_accuracy": 0.0,
+            "mean_latency_ms": 0.4363
+          },
+          "noise": {
+            "label": "无关噪声",
+            "total": 4,
+            "direction_accuracy": 100.0,
+            "mean_latency_ms": 0.0569
+          }
+        }
+      },
+      "cases": [
+        {
+          "case": "S1",
+          "category": "single",
+          "intent": "把画面整体调亮一点",
+          "expect": "曝光上升",
+          "direction_ok": false
+        },
+        {
+          "case": "S2",
+          "category": "single",
+          "intent": "画面太亮了，帮我压暗一些",
+          "expect": "曝光下降",
+          "direction_ok": false
+        },
+        {
+          "case": "S3",
+          "category": "single",
+          "intent": "增加一点对比度",
+          "expect": "对比度上升",
+          "direction_ok": false
+        },
+        {
+          "case": "S4",
+          "category": "single",
+          "intent": "把饱和度降下来一点",
+          "expect": "饱和度下降",
+          "direction_ok": false
+        },
+        {
+          "case": "S5",
+          "category": "single",
+          "intent": "整体调得偏暖一些",
+          "expect": "色温上升",
+          "direction_ok": true
+        },
+        {
+          "case": "S6",
+          "category": "single",
+          "intent": "把高光压一压",
+          "expect": "高光下降",
+          "direction_ok": false
+        },
+        {
+          "case": "M1",
+          "category": "compound",
+          "intent": "黄昏暖调，同时压住高光",
+          "expect": "色温上升 + 高光下降",
+          "direction_ok": true
+        },
+        {
+          "case": "M2",
+          "category": "compound",
+          "intent": "清冷通透的日系氛围",
+          "expect": "色温下降 + 曝光上升",
+          "direction_ok": true
+        },
+        {
+          "case": "M3",
+          "category": "compound",
+          "intent": "电影感的青橙色调",
+          "expect": "分离色调双侧着色",
+          "direction_ok": true
+        },
+        {
+          "case": "M4",
+          "category": "compound",
+          "intent": "黑白纪实风格，加强对比",
+          "expect": "饱和度归零 + 对比度上升",
+          "direction_ok": true
+        },
+        {
+          "case": "M5",
+          "category": "compound",
+          "intent": "柔和低对比的雾面感",
+          "expect": "对比度下降",
+          "direction_ok": true
+        },
+        {
+          "case": "M6",
+          "category": "compound",
+          "intent": "鲜艳浓郁的风光大片",
+          "expect": "色彩浓度上升（饱和度或自然饱和度）",
+          "direction_ok": true
+        },
+        {
+          "case": "I1",
+          "category": "incremental",
+          "intent": "再暖一点",
+          "expect": "在当前暖色基础上色温继续上升",
+          "direction_ok": false
+        },
+        {
+          "case": "I2",
+          "category": "incremental",
+          "intent": "高光再压一点",
+          "expect": "在当前基础上高光继续下降",
+          "direction_ok": false
+        },
+        {
+          "case": "I3",
+          "category": "incremental",
+          "intent": "饱和度再高一些",
+          "expect": "在当前基础上饱和度继续上升",
+          "direction_ok": false
+        },
+        {
+          "case": "I4",
+          "category": "incremental",
+          "intent": "对比再强一点",
+          "expect": "在当前基础上对比度继续上升",
+          "direction_ok": false
+        },
+        {
+          "case": "X1",
+          "category": "extreme",
+          "intent": "曝光拉到最亮",
+          "expect": "曝光接近 +2 EV 上界",
+          "direction_ok": false
+        },
+        {
+          "case": "X2",
+          "category": "extreme",
+          "intent": "饱和度全部去掉，越灰越好",
+          "expect": "饱和度贴近 -100 下界",
+          "direction_ok": false
+        },
+        {
+          "case": "X3",
+          "category": "extreme",
+          "intent": "色温调到最冷",
+          "expect": "色温贴近 -100 下界",
+          "direction_ok": false
+        },
+        {
+          "case": "X4",
+          "category": "extreme",
+          "intent": "对比度拉到极限",
+          "expect": "对比度贴近 +100 上界",
+          "direction_ok": false
+        },
+        {
+          "case": "N1",
+          "category": "noise",
+          "intent": "帮我写个冒泡排序",
+          "expect": "参数保持不变",
+          "direction_ok": true
+        },
+        {
+          "case": "N2",
+          "category": "noise",
+          "intent": "今天天气怎么样",
+          "expect": "参数保持不变",
+          "direction_ok": true
+        },
+        {
+          "case": "N3",
+          "category": "noise",
+          "intent": "1+1 等于几",
+          "expect": "参数保持不变",
+          "direction_ok": true
+        },
+        {
+          "case": "N4",
+          "category": "noise",
+          "intent": "把这段文字翻译成英文",
+          "expect": "参数保持不变",
+          "direction_ok": true
+        }
+      ]
+    },
+    "elapsed_s": 0.03
+  }
+}

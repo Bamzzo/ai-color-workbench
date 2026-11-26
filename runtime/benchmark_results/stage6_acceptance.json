@@ -1,0 +1,27 @@
+{
+  "base": "http://127.0.0.1:5173",
+  "checks": [
+    {
+      "name": "histogram_pixels",
+      "ok": true,
+      "count": 1632,
+      "glErr": 0,
+      "w": 288,
+      "h": 110
+    },
+    {
+      "name": "qingtou_not_warm_template",
+      "warm_leak": false,
+      "summary": "按结构化数值解析：temperature +6, tint +2, exposure_ev +0.2, highlights -12, shadows +15, saturation -8, vibrance +6。全局调色：曝光 (EV) +0.20，色温 +6，色调 +2，高光 -12，阴影 +15，饱和度 -8，"
+    },
+    {
+      "name": "console_errors",
+      "errors": []
+    },
+    {
+      "name": "histogram_after_bloom",
+      "count": 1736,
+      "ok": true
+    }
+  ]
+}

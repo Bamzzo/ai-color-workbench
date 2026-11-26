@@ -1,0 +1,8 @@
+Pillow
+numpy
+jsonschema
+httpx
+python-dotenv
+fastapi
+uvicorn[standard]
+python-multipart

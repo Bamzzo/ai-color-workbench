@@ -1,0 +1,62 @@
+:root {
+  /* ---------- 三层暗房明度阶梯 ---------- */
+  --bg-shell: #131316;
+  --bg-abyss: #0b0b0d;
+  --bg-card: #19191d;
+  --bg-groove: #101012;
+  --bg-stage: #26262a;
+
+  /* ---------- 磨砂玻璃材质 ---------- */
+  --glass-1: linear-gradient(165deg, rgba(28, 29, 34, 0.78) 0%, rgba(18, 18, 22, 0.88) 100%);
+  --glass-2: linear-gradient(145deg, rgba(255, 255, 255, 0.045) 0%, rgba(255, 255, 255, 0.012) 100%);
+  --glass-blur: blur(24px) saturate(140%);
+  --rim: 1px solid rgba(255, 255, 255, 0.07);
+  --rim-top: 1px solid rgba(255, 255, 255, 0.14);
+  --glass-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.75), inset 0 1px 0 0 rgba(255, 255, 255, 0.06);
+
+  /* ---------- 文字（投影仪下需要更高对比度） ---------- */
+  --text-primary: #f4f4f6;
+  --text-muted: #b8b8c2;
+  --text-dim: #8a8a94;
+
+  /* ---------- 胶片琥珀强调色：选中 / 焦点 / 改动 / 主操作 ---------- */
+  --amber: #e9a54a;
+  --amber-bright: #ffc56e;
+  --amber-deep: #c9822a;
+  --amber-ink: #1c1206;
+  --amber-soft: rgba(233, 165, 74, 0.14);
+  --amber-line: rgba(233, 165, 74, 0.5);
+
+  /* ---------- 明度分层（替代内层边框） ---------- */
+  --layer-1: rgba(255, 255, 255, 0.028);
+  --layer-2: rgba(255, 255, 255, 0.05);
+  --layer-sunken: rgba(0, 0, 0, 0.22);
+
+  /* ---------- 字号 ---------- */
+  --fs-xs: 11px;
+  --fs-sm: 12px;
+  --fs-md: 13px;
+  --fs-lg: 14px;
+
+  /* ---------- 黑灰强调（银白） ---------- */
+  --accent: #e7e8ee;
+  --accent-bright: #ffffff;
+  --accent-line: rgba(255, 255, 255, 0.55);
+  --accent-glow: rgba(255, 255, 255, 0.16);
+  --accent-r: #ff5a5f;
+  --accent-g: #2ec4b6;
+  --accent-b: #3a86ff;
+  --track-idle: #2a2a30;
+
+  /* ---------- 尺寸 ---------- */
+  --toolbar-h: 46px;
+  --statusbar-h: 24px;
+  --sidebar-w: 344px;
+  --gap: 10px;
+  --radius-lg: 12px;
+  --radius-md: 8px;
+  --radius-sm: 6px;
+
+  --font-ui: "Segoe UI", "Microsoft YaHei UI", system-ui, sans-serif;
+  --font-mono: "Cascadia Mono", "Consolas", monospace;
+}

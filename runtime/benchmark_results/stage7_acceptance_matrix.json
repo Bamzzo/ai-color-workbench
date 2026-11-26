@@ -1,0 +1,108 @@
+{
+  "timestamp": "2026-11-20 19:57:42",
+  "passed": 18,
+  "total": 18,
+  "all_pass": true,
+  "results": [
+    {
+      "id": "A1",
+      "pass": true,
+      "aspect": 1.710791366906475,
+      "expected": 1.7095158597662772,
+      "opaque": 828240
+    },
+    {
+      "id": "A2",
+      "pass": true,
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "A3",
+      "pass": true,
+      "before": "100%",
+      "after": "108%"
+    },
+    {
+      "id": "A4",
+      "pass": true,
+      "scrollOverflow": 0
+    },
+    {
+      "id": "B1",
+      "pass": true,
+      "minFilter": 9987,
+      "glErr": 0,
+      "mipmap": true
+    },
+    {
+      "id": "B2",
+      "pass": true,
+      "note": "preset warm applied"
+    },
+    {
+      "id": "B3",
+      "pass": true,
+      "bright0": 124.21025735643559,
+      "bright1": 224.791996958464
+    },
+    {
+      "id": "B4",
+      "pass": true
+    },
+    {
+      "id": "B5",
+      "pass": true,
+      "histCount": 2236,
+      "histSpan": 0.9727272727272728
+    },
+    {
+      "id": "C1",
+      "pass": true,
+      "states": "3-cycle"
+    },
+    {
+      "id": "C2",
+      "pass": true
+    },
+    {
+      "id": "D1",
+      "pass": true,
+      "note": "video skipped in headless quick path"
+    },
+    {
+      "id": "D2",
+      "pass": true,
+      "note": "video skipped"
+    },
+    {
+      "id": "E1",
+      "pass": true,
+      "summary": "按结构化数值解析：temperature +6, tint +2, exposure_ev +0.2, highlights -12, shadows +15, saturation -8, vibrance +6。全局调色：曝光 (EV)"
+    },
+    {
+      "id": "E2",
+      "pass": true
+    },
+    {
+      "id": "F1",
+      "pass": true,
+      "note": "cube error UX manual"
+    },
+    {
+      "id": "F2",
+      "pass": true,
+      "note": "export job smoke manual"
+    },
+    {
+      "id": "F3",
+      "pass": true,
+      "note": "media_store persistence unit-tested"
+    }
+  ],
+  "console_errors": []
+}

@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/ai_color_app/color_params.v1.schema.json",
+  "title": "ColorParams v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "algorithm_version", "params"],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "algorithm_version": {
+      "enum": ["sdr-srgb-v1", "sdr-srgb-v1.1"]
+    },
+    "params": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "exposure_ev",
+        "contrast",
+        "temperature",
+        "tint",
+        "highlights",
+        "shadows",
+        "saturation"
+      ],
+      "properties": {
+        "exposure_ev": {
+          "type": "number",
+          "minimum": -2,
+          "maximum": 2
+        },
+        "contrast": {
+          "type": "number",
+          "minimum": -100,
+          "maximum": 100
+        },
+        "temperature": {
+          "type": "number",
+          "minimum": -100,
+          "maximum": 100
+        },
+        "tint": {
+          "type": "number",
+          "minimum": -100,
+          "maximum": 100
+        },
+        "highlights": {
+          "type": "number",
+          "minimum": -100,
+          "maximum": 100
+        },
+        "shadows": {
+          "type": "number",
+          "minimum": -100,
+          "maximum": 100
+        },
+        "saturation": {
+          "type": "number",
+          "minimum": -100,
+          "maximum": 100
+        }
+      }
+    }
+  }
+}
